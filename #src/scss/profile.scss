@@ -1,0 +1,131 @@
+/*----------------------------------------------------------------
+    Profile
+----------------------------------------------------------------*/
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-color: #fff;
+	// .profile__user
+	&__user {
+        display: flex;
+        align-items: center;
+
+        color: #E73348;
+        cursor: pointer;
+        background: inherit;
+    }
+	// .profile__photo
+	&__photo {
+        flex-shrink: 0;
+        width: 70px;
+        height: 70px;
+
+        border-radius: 50%;
+        overflow: hidden;
+        @media(max-width: 767px) {
+			width: 50px;
+			height: 50px;
+		}
+    }
+	// .profile__img
+	&__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+    // .profile__desc
+    &__desc {
+        margin-left: 10px;
+    }
+	// .profile__greeting
+	&__greeting {
+        font-size: 14px;
+    }
+	// .profile__name
+	&__name {
+        font-size: 16px;
+        font-weight: 700;
+    }
+	// .profile__btn
+	&__btn {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin-left: 45px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 0;
+        outline: none;
+        background: inherit;
+        border: 1px dashed darken($color: #e5e5e5, $amount: 50%);
+        cursor: pointer;
+        transition: transform .3s;
+        &:after {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 9px;
+
+            background: url('../img/icons/arrow.svg') center no-repeat;
+            transition: transform .3s;
+        }
+        &--active::after {
+            transform: rotateX(180deg);
+        }
+    }
+    // .profile__inner
+    &__inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding-top: 10px;
+        transition: top .4s, opacity .7s;
+        opacity: 0;
+        visibility: hidden;
+        &--active {
+            top: 100%;
+            opacity: 1;
+            visibility: visible;
+            @media(max-width:  575px) {
+                width: 100px;
+                left: initial;
+                right: 0;
+            }
+        }
+    }
+	// .profile__list
+	&__list {
+        width: clamp(70px, 60%, 100%);
+        padding: 15px;
+        margin-left: auto;
+
+        border-radius: 4px;
+        background-color: darken($color:#FFF7F7 , $amount: 2%);
+        @media(max-width: 420px) {
+            padding: 10px;
+        }
+    }
+	// .profile__row
+	&__row {
+        margin-bottom: 15px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+	// .profile__lk
+	&__lk {
+        font-size: 16px;
+        color: #311746;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import "./components/root";
+@import "./components/mixins";
+@import "./components/fonts";
+@import "./components/reset";
+@import "./components/global";
+@import "./components/forms";
+
+
+// header, footer
+@import "header";
+@import "logo";
+@import "profile";
+@import "footer";
+
+// creators
+@import "creators";
+@import "search";
+@import "person";

@@ -1,0 +1,169 @@
+/*----------------------------------------------------------------
+    Person Card
+----------------------------------------------------------------*/
+.person {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+
+    border-radius: 4px;
+    background-color: #000;
+    overflow: hidden;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+
+        transition: opacity .3s;
+    }
+    &::before {
+        z-index: 2;
+        background: rgb(23,23,23);
+        background: linear-gradient(0deg, rgba(23,23,23, 1) 20%, rgba(23,23,23,0) 100%);
+    }
+    &::after {
+        z-index: 3;
+        background: rgba(23,23,23, .35);
+    }
+    // .person__img
+    &__img {
+        z-index: 1;
+    }
+     // .person__content
+     &__content {
+        z-index: 4;
+        position: relative;
+        padding: 20px 20px 0;
+        
+        color: #fff;
+        &:hover .person__more {
+            transform: translateY(0);
+        }
+    }
+    // .person__more
+    &__more {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        transform: translateY(100%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 20px 20px 0;
+
+        font-size: 18px;
+        background: rgb(23,23,23);
+        background: linear-gradient(0deg, rgba(23,23,23, 1) 50%, rgba(23,23,23,0) 100%);
+        transition: transform .8s;
+    }
+    &__more,
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        cursor: pointer;
+    }
+    // person__text 
+    &__text {
+        color: #fff;
+    }
+    // .person__footer
+    &__footer {
+        z-index: 5;
+        padding: 20px;
+        background: rgb(23,23,23);
+    }
+    // .person__btn
+    &__btn {
+        position: relative;
+        display: block;
+        background-color: transparent;
+        & span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+            display: inline-flex; 
+            flex-direction: column;
+            justify-content: center;
+            
+
+            border-radius: 4px;
+            border: 2px solid var(--main-red);
+            background-color: transparent;
+            cursor: pointer;
+            transition: transform .5s, opacity .4s;
+        }
+        & :last-child {
+            color: var(--main-red);
+        }
+        & :first-child {
+            color: #FFF7F7;
+            z-index: 2;
+            background-color: var(--main-red);
+        }
+        &:hover :first-child {
+            opacity: 0;
+            transform: scale(2);
+        }
+        //.person--create
+        &--create {
+            & span {
+                border: 2px solid #FFF7F7;
+            }
+            & :last-child {
+                color: #FFF7F7;
+            }
+            & :first-child {
+                color: var(--main-red);
+                background-color: #FFF7F7;
+            }
+        }
+    }
+    // .person__name
+    &__name {
+        margin-bottom: 10px;
+
+        font-size: 30px;
+        line-height: 1.2;
+        &--upper {
+            text-transform: uppercase;
+        }
+    }
+    // .person__desc
+    &__desc {
+        line-height: 1.35;
+        font-size: 18px;
+    }
+     // .person--new
+    &--new {
+        background: var(--main-red);
+        & .person__footer {
+            background: var(--main-red);
+        }
+        &::after,
+        &::before {
+            display: none;
+        }
+        & .person__more {
+            background: var(--main-red);
+            background: linear-gradient(0deg, rgba(231, 51, 72, 1) 50%, rgba(231, 51, 72, 0) 100%);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/*----------------------------------------------------------------
+   Main Header
+----------------------------------------------------------------*/
+.main-header {
+	padding-top: 55px;
+	// .main-header__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 70px;
+	}
+	// .main-header__logo
+	&__logo {
+	}
+	// .main-header__profile
+	&__profile {
+		@media(max-width: 767px) {
+			.profile__btn { display: none; }
+		}
+		@media(max-width: 575px) {
+			.profile__desc { display: none; }
+		}
+	}
+}
+
+
+
+
