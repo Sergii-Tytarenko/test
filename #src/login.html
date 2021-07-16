@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('_head.html',{
+	"title": "Login page"
+})
+<body>
+	<div class="wrapper">
+		@include('_header.html',{
+            "menu1": "Home",
+            "link1": "index.html"
+        })
+		<main class="page">
+            <!-- Enter -->
+            <section class="enter">
+                <div class="enter__container container">
+                    <form  class="enter__form form" action="#" method="POST" name="enter" autocomplete="off">
+                        <h3 class="form__title">Login</h3>
+    
+                        <div class="form__group">
+                            <label class="visually-hidden" for="email">Your e-meil</label>
+                            <input class="form__input" id="email" name="email" type="email" placeholder="Email" required>
+                        </div>
+    
+                        <div class="form__group">
+                            <label class="visually-hidden" for="name">Password</label>
+                            <input class="form__input" id="Password" name="password" type="password" placeholder="Password" required>
+                        </div>
+    
+                        <div class="form__group form__group--m">
+                            <p class="form__text">
+                                Forgot your password? 
+                                <a class="form__question red-text" href="#">Reset by email</a>
+                            </p>
+                        </div>
+    
+                        <div class="form__group form__group--m">
+                            <button class="form__btn btn btn--lite" type="submit">Log In</button>
+                        </div>
+    
+                        <div class="form__group">
+                            <h4 class="form__subtitle">Or Log In with</h4>
+                        </div>
+    
+                        <div class="form__group form__group--accounts form__group--m">
+                            <button class="form__lk form__lk--fb" type="button">
+                                <svg class="form__icon form__icon--fb" width="10" height="20">
+                                    <use xlink:href="img/sprite.svg#fb"></use>
+                                </svg>
+                                Facebook
+                            </button>
+    
+                            <button class="form__lk form__lk--g" type="button">
+                                <svg class="form__icon form__icon--g" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#google"></use>
+                                </svg>
+                                Google
+                            </button>
+                        </div>
+    
+                        <div class="form__group form__group--m">
+                            <p class="form__reg">Don’t have an account yet?<a class="form__question red-text" href="#">Sing Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main> <!-- /.page -->
+		@include('_footer.html',{})
+	</div> <!-- /.wrapper -->
+	
+	<script src="js/script.js"></script>
+</body>
+</html>
