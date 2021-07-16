@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login page</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="description" content="MeralDev Creators">
+  <meta name="keywords" content="">
+  <meta name="Author" content="SMT">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="main-header__container container">
+        <a class="main-header__logo logo" href="index.html" title="Home">
+          <img class="logo__img" src="img/header/MeralDev-logo.svg" alt="MeralDev" width="195" height="70">
+        </a>
+
+        <div class="main-header__profile profile">
+          <div class="profile__user">
+            <div class="profile__photo">
+              <img class="profile__img" src="img/header/user-photo.jpg" alt="User Name" width="50" height="50">
+            </div>
+
+            <div class="profile__desc">
+              <p class="profile__greeting">Hello</p>
+              <p class="profile__name">Username</p>
+            </div>
+          </div>
+
+          <button class="profile__btn" type="button">Select options</button>
+
+          <div class="profile__inner">
+            <ul class="profile__list">
+              <li class="profile__row">
+                <a class="profile__lk" href="index.html">Home</a>
+              </li>
+
+              <li class="profile__row">
+                <a class="profile__lk" href="#">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <!-- Enter -->
+      <section class="enter">
+        <div class="enter__container container">
+          <form class="enter__form form" action="#" method="POST" name="enter" autocomplete="off">
+            <h3 class="form__title">Login</h3>
+
+            <div class="form__group">
+              <label class="visually-hidden" for="email">Your e-meil</label>
+              <input class="form__input" id="email" name="email" type="email" placeholder="Email" required>
+            </div>
+
+            <div class="form__group">
+              <label class="visually-hidden" for="name">Password</label>
+              <input class="form__input" id="Password" name="password" type="password" placeholder="Password" required>
+            </div>
+
+            <div class="form__group form__group--m">
+              <p class="form__text">
+                Forgot your password?
+                <a class="form__question red-text" href="#">Reset by email</a>
+              </p>
+            </div>
+
+            <div class="form__group form__group--m">
+              <button class="form__btn btn btn--lite" type="submit">Log In</button>
+            </div>
+
+            <div class="form__group">
+              <h4 class="form__subtitle">Or Log In with</h4>
+            </div>
+
+            <div class="form__group form__group--accounts form__group--m">
+              <button class="form__lk form__lk--fb" type="button">
+                <svg class="form__icon form__icon--fb" width="10" height="20">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
+                Facebook
+              </button>
+
+              <button class="form__lk form__lk--g" type="button">
+                <svg class="form__icon form__icon--g" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#google"></use>
+                </svg>
+                Google
+              </button>
+            </div>
+
+            <div class="form__group form__group--m">
+              <p class="form__reg">Don’t have an account yet?<a class="form__question red-text" href="#">Sing Up</a></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main> <!-- /.page -->
+    <footer class="main-footer">
+      <div class="main-footer__container container">
+        <div class="main-footer__col">
+          <div class="main-footer__copy">
+            <a class="main-footer__lk" href="#" target="_blank">Policy & Terms</a>
+            <a class="main-footer__lk" href="#" target="_blank">TL;DR</a>
+            <a class="main-footer__lk" href="#" target="_blank">Privacy</a>
+          </div>
+        </div>
+
+        <div class="main-footer__col">
+          <a class="main-footer__author" href="#" target="_blank">meraldev.com 2020</a>
+        </div>
+      </div>
+    </footer>
+  </div> <!-- /.wrapper -->
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
