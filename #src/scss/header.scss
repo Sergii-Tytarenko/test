@@ -5,6 +5,9 @@
 	position: relative;
 	z-index: 999;
 	padding-top: 55px;
+	@media(max-width: 575px) {
+		padding-top: 43px;
+	}
 	// .main-header__container
 	&__container {
 		display: flex;
