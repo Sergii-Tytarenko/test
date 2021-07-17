@@ -2,6 +2,8 @@
    Main Header
 ----------------------------------------------------------------*/
 .main-header {
+	position: relative;
+	z-index: 999;
 	padding-top: 55px;
 	// .main-header__container
 	&__container {

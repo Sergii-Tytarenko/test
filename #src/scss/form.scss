@@ -37,6 +37,7 @@
         color: #311746;
         box-shadow: 0 3px 10px rgba(#58131B, .1);
         transition: box-shadow .3s;
+        border-radius: 2px !important;
         &::placeholder {
             color: #837490;
             font-family: inherit;
@@ -109,7 +110,7 @@
             border-color: #4968AD;
             &:hover,
             &:focus {
-                box-shadow: 0 0 10px rgba(#4968AD, 0.2);
+                box-shadow: 3px 3px 10px rgba(#4968AD, 0.3);
             }
         }
         &--g {
