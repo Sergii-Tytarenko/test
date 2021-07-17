@@ -1211,6 +1211,9 @@ body.lock {
 }
 
 @media (max-width: 575px) {
+  .main-header {
+    padding-top: 43px;  
+  }
   .main-header__profile .profile__desc {
     display: none;
   }
