@@ -5,10 +5,15 @@
 })
 <body>
 	<div class="wrapper">
-		@include('_header.html',{
-            "menu1": "Home",
-            "link1": "index.html"
-        })
+        <!-- Header -->
+		<header class="main-header">
+            <div class="main-header__container container">
+                <a class="main-header__logo logo" href="index.html" title="Home">
+                    <img class="logo__img" src="img/header/MeralDev-logo.svg" alt="MeralDev" width="195" height="70">
+                </a>
+            </div>
+        </header>
+        
 		<main class="page">
             <!-- Enter -->
             <section class="enter">
@@ -64,7 +69,15 @@
                 </div>
             </section>
         </main> <!-- /.page -->
-		@include('_footer.html',{})
+
+        <!-- Header -->
+		<footer class="main-footer main-footer--login">
+            <div class="main-footer__container container">
+                <div class="main-footer__col">
+                    <a class="main-footer__author" href="#" target="_blank">meraldev.com  2020</a>
+                </div>
+            </div>
+        </footer>
 	</div> <!-- /.wrapper -->
 	
 	<script src="js/script.js"></script>

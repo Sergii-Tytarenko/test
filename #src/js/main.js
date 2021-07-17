@@ -6,14 +6,16 @@ import Swiper from 'swiper/bundle';
 const menuBtn = document.querySelector('.profile__btn'),
       menuUser = document.querySelector('.profile__user'),
       headerMenu = document.querySelector('.profile__inner');
+      
+if (document.querySelector('.profile')) {
 
-menuBtn.addEventListener('click', () => showMenu())
-menuUser.addEventListener('click', () => showMenu())
+    menuBtn.addEventListener('click', () => showMenu())
+    menuUser.addEventListener('click', () => showMenu())
 
-function showMenu() {
-    if(menuBtn)  menuBtn.classList.toggle('profile__btn--active')
-   
-    headerMenu.classList.toggle('profile__inner--active')
+    function showMenu() {
+        if(menuBtn)  menuBtn.classList.toggle('profile__btn--active')
+        headerMenu.classList.toggle('profile__inner--active')
+    }
 }
 
 
