@@ -125,7 +125,7 @@ const creatorsSlider = document.querySelector('.creators__slider');
 
 if (creatorsSlider) {
     let mySwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"](creatorsSlider, {
-		spaceBetween: 32,
+        spaceBetween: 32,
 		wrapperClass: 'creators__wrapper',
 		slideClass: 'creators__item',
 		speed: 1000,
@@ -137,6 +137,11 @@ if (creatorsSlider) {
 			prevEl: '.creators__btn-prev',
 		},
         breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 15
+            },
             // when window width is >= 375px
             375: {
                 slidesPerView: 1.3,
@@ -180,7 +185,7 @@ if (creatorsSlider) {
             // when window width is >= 1110px
             1110: {
                 slidesPerView: 4,
-                spaceBetween: 20
+                spaceBetween: 32
             },
         }
 	});
