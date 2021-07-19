@@ -366,6 +366,7 @@ body.lock {
   left: 0;
   top: 0;
   width: 100%;
+  z-index: -1;
   padding-top: 5px;
   -webkit-transition: top .4s, opacity .7s;
   -o-transition: top .4s, opacity .7s;

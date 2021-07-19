@@ -3,11 +3,10 @@ import Swiper from 'swiper/bundle';
 
 /* Header menu
 ---------------------------------------------------------------*/
-const menuBtn = document.querySelector('.profile__btn'),
-      menuUser = document.querySelector('.profile__user'),
-      headerMenu = document.querySelector('.profile__inner');
-      
 if (document.querySelector('.profile')) {
+    const menuBtn = document.querySelector('.profile__btn'),
+          menuUser = document.querySelector('.profile__user'),
+          headerMenu = document.querySelector('.profile__inner');
 
     menuBtn.addEventListener('click', () => showMenu())
     menuUser.addEventListener('click', () => showMenu())
@@ -16,6 +15,13 @@ if (document.querySelector('.profile')) {
         if(menuBtn)  menuBtn.classList.toggle('profile__btn--active')
         headerMenu.classList.toggle('profile__inner--active')
     }
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.profile') || e.target.classList.contains('profile__inner')) {
+            menuBtn.classList.remove('profile__btn--active')
+            headerMenu.classList.remove('profile__inner--active')
+        }
+    }); 
 }
 
 
@@ -31,7 +37,6 @@ if (creatorsSlider) {
 		speed: 1000,
         watchSlidesVisibility: true,
         watchOverflow: true,
-        preventClicks: true,
         navigation: {
 			nextEl: '.creators__btn-next',
 			prevEl: '.creators__btn-prev',
@@ -90,4 +95,3 @@ if (creatorsSlider) {
         }
 	});
 }
-
